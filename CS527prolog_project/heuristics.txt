@@ -1,0 +1,13 @@
+#Prolog Programming -CS527 Programming Assignment 2 
+Craig Parry
+
+vamp-wolf heuristic- 
+The heursitic counts the number of vampires and werewolves that are on the goal side of the river by taking the absolute value of the difference of the current state V and W with the goal state V and W and divid that value by 2. 
+The intuition was to create heuristic that could generate a unique value to cover the breadth of the state as well as never have an H value that is larger than the cost to the goal by always halving the difference between the current and goal state. 
+
+The heuristic is monotonic and admissible in that as we approach the goal the H value of the next state is always less than or equal to the current state and H is never larger than the cost to the goal from the current state.
+
+sliding-tile heuristic- 
+The heursitic was inspired by least squared regression (Thanks to the torture in Numerical Analysis this semester) and it uses the sum of squared difference. The Sum of squared difference takes the difference of each index, squares and folds into a single value. Which I ended up taking the root of that value. Without taking the root I generated values that are larger than the cost to the goal, so we needed to take the root to guarantee that the H value does not exceed the cost to the goal.
+
+Again, The heuristic is monotonic and admissible in that as we approach the goal the H value of the next state is always less than or equal to the current state and H is never larger than the cost to the goal from the current state. 
